@@ -1,31 +1,313 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Shakhunov Design</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0d0d15;
+            color: #eeeeee;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ВЕРХНЯЯ ПОЛОСА */
+
+        header {
+            height: 55px;
+            border-bottom: 1px solid #272730;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 10%;
+        }
+
+        .name {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #aaaaaa;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            border: 1px solid #353540;
+            border-radius: 20px;
+
+            padding: 8px 18px;
+
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #999999;
+        }
+
+
+        /* НАВИГАЦИЯ */
+
+        nav {
+            height: 45px;
+            border-bottom: 1px solid #1d1d25;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 10%;
+        }
+
+        .sections {
+            display: flex;
+            gap: 45px;
+
+            font-size: 21px;
+            letter-spacing: 9px;
+        }
+
+        .active {
+            color: white;
+            border-bottom: 1px solid #6579ae;
+            padding-bottom: 12px;
+        }
+
+        .inactive {
+            color: #6275a8;
+        }
+
+        .contacts {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #888888;
+        }
+
+
+        /* ОСНОВНОЙ КОНТЕНТ */
+
+        main {
+            width: 80%;
+            margin: 55px auto 100px auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            margin-top: 23px;
+            color: #80926c;
+            font-size: 13px;
+        }
+
+
+        /* ЗАГОЛОВОК НАД КАРТИНКАМИ */
+
+        .gallery-header {
+            margin-top: 55px;
+            margin-bottom: 27px;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 8px;
+            letter-spacing: 2px;
+            color: #555564;
+        }
+
+
+        /* ГАЛЕРЕЯ */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* ОДИНАКОВЫЙ РАЗМЕР ВСЕХ КАРТИНОК */
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+
+            overflow: hidden;
+
+            background: #eeeeee;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        /* НЕБОЛЬШОЙ ЭФФЕКТ ПРИ НАВЕДЕНИИ */
+
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* МОБИЛЬНАЯ ВЕРСИЯ */
+
+        @media (max-width: 900px) {
+
+            main {
+                width: 90%;
+            }
+
+            header,
+            nav {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .sections {
+                font-size: 16px;
+                letter-spacing: 5px;
+            }
+
+        }
+
+    </style>
 </head>
 
-<body style="
-    margin: 40px;
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-">
 
-    <div style="font-size: 20px;">
-        тест
+<body>
+
+
+<header>
+
+    <div class="name">
+        СЕРГЕЙ ШАХУНОВ
     </div>
 
-    <img
-        src="image.png"
-        alt="Тестовое изображение"
-        style="
-            display: block;
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-        "
-    >
+    <div class="header-buttons">
+
+        <div class="button">
+            ← ГЛАВНАЯ
+        </div>
+
+        <div class="button">
+            НАСТРОЙКИ
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav>
+
+    <div class="sections">
+
+        <div class="active">
+            ТЕСТ
+        </div>
+
+        <div class="inactive">
+            ТЕСТ 2
+        </div>
+
+    </div>
+
+    <div class="contacts">
+        КОНТАКТЫ
+    </div>
+
+</nav>
+
+
+<main>
+
+    <h1>
+        Архитект
+    </h1>
+
+    <div class="subtitle">
+        Проектирование
+    </div>
+
+
+    <div class="gallery-header">
+
+        <div>
+            АРХИТЕКТУРА
+        </div>
+
+        <div>
+            ← ВСЕ РАЗДЕЛЫ
+        </div>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="01.jpg">
+        </div>
+
+        <div class="gallery-item">
+            <img src="02.jpg">
+        </div>
+
+        <div class="gallery-item">
+            <img src="03.jpg">
+        </div>
+
+        <div class="gallery-item">
+            <img src="04.jpg">
+        </div>
+
+        <div class="gallery-item">
+            <img src="05.jpg">
+        </div>
+
+        <div class="gallery-item">
+            <img src="06.jpg">
+        </div>
+
+    </div>
+
+</main>
+
 
 </body>
 </html>
