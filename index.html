@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shakhunov Design</title>
+    <title>Portfolio Test</title>
 
     <style>
 
@@ -35,9 +35,7 @@
         }
 
         .name {
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: #aaaaaa;
+            min-width: 100px;
         }
 
         .header-buttons {
@@ -134,14 +132,12 @@
 
         .gallery {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
             gap: 20px;
         }
 
 
-        /* ОДИНАКОВЫЙ РАЗМЕР ВСЕХ КАРТИНОК */
+        /* ОДИНАКОВЫЙ РАЗМЕР КАРТИНОК */
 
         .gallery-item {
             width: 100%;
@@ -164,14 +160,14 @@
         }
 
 
-        /* НЕБОЛЬШОЙ ЭФФЕКТ ПРИ НАВЕДЕНИИ */
+        /* ЭФФЕКТ ПРИ НАВЕДЕНИИ */
 
         .gallery-item:hover img {
             transform: scale(1.03);
         }
 
 
-        /* МОБИЛЬНАЯ ВЕРСИЯ */
+        /* ПЛАНШЕТ */
 
         @media (max-width: 900px) {
 
@@ -191,6 +187,8 @@
 
         }
 
+
+        /* ТЕЛЕФОН */
 
         @media (max-width: 600px) {
 
@@ -214,9 +212,7 @@
 
 <header>
 
-    <div class="name">
-        СЕРГЕЙ ШАХУНОВ
-    </div>
+    <div class="name"></div>
 
     <div class="header-buttons">
 
@@ -281,27 +277,27 @@
     <div class="gallery">
 
         <div class="gallery-item">
-            <img src="01.jpg">
+            <img src="1.jpg" alt="">
         </div>
 
         <div class="gallery-item">
-            <img src="02.jpg">
+            <img src="2.jpg" alt="">
         </div>
 
         <div class="gallery-item">
-            <img src="03.jpg">
+            <img src="3.jpg" alt="">
         </div>
 
         <div class="gallery-item">
-            <img src="04.jpg">
+            <img src="4.jpg" alt="">
         </div>
 
         <div class="gallery-item">
-            <img src="05.jpg">
+            <img src="5.jpg" alt="">
         </div>
 
         <div class="gallery-item">
-            <img src="06.jpg">
+            <img src="6.jpg" alt="">
         </div>
 
     </div>
